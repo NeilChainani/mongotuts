@@ -30,7 +30,9 @@ MongoClient.connect(
       .then(result => {
         console.log(result);
       });*/
-    db.collection("Users");
+    db.collection("Users").deleteMany({
+      _id: new ObjectID("5c0a90f51053f778e8f6b902")
+    });
     //db.close();
   }
 );
